@@ -174,28 +174,28 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="w-再遇python" class="article article-type-w  article-index" itemscope itemprop="blogPost">
+    <article id="w-爱-别离" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/08/再遇python/">再遇python</a>
+      <a class="article-title" href="/2018/04/08/爱-别离/">爱-别离</a>
     </h1>
   
 
         
-        <a href="/2018/04/08/再遇python/" class="archive-article-date">
-  	<time datetime="2018-04-08T01:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+        <a href="/2018/04/08/爱-别离/" class="archive-article-date">
+  	<time datetime="2018-04-08T04:42:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####简单爬虫-豆瓣电影<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests  <span class="comment"># 导入网页请求库(简单模拟用户发送请求）</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup  <span class="comment"># 导入网页解析库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 传入URL</span></span><br><span class="line"></span><br><span class="line">r = requests.get(<span class="string">'https://movie.douban.com/chart'</span>)  <span class="comment"># 模拟用户请求，请求成功，服务器会相应！</span></span><br><span class="line"><span class="comment"># print(r.text)  此处可以测试服务器是否正确响应</span></span><br><span class="line"><span class="comment"># 解析URL</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(r.text, <span class="string">'html.parser'</span>)  <span class="comment"># 简单理解成把服务器传过来的html规范化</span></span><br><span class="line">contentList = soup.find_all(<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">'pl2'</span>&#125;)  <span class="comment"># 根据你所设置的过滤条件来过滤其中的信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 迭代List中的所有信息：</span></span><br><span class="line">print(len(contentList))  <span class="comment"># 看看有多少条</span></span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> contentList:  </span><br><span class="line">	print(content.a.text)  <span class="comment"># 从浏览器检查元素可知标签div下的a中文字</span></span><br></pre></td></tr></table></figure></p>
-<font face="微软雅黑" color="black" size="4"><br><br><br></font>
+        <font face="微软雅黑" color="black" size="3"><br>纪伯伦曾写道：<br>&gt; 你们的儿女<br>其实不是你们的儿女<br>他们是生命自由的渴望<br>而诞生的孩子<br>他借助你们来到这个世界<br>但却非因你而来<br>因为他们的灵魂<br>属于明天<br>属于你做梦<br>&gt; 也无法到达的明天<br>######在勇敢，也有不想到达的明天<br>和妈妈的争执，其实是从2月初开始的。<br>成绩出来之后，就开始强调，没关系，我们还可以报xds。<br>分数线出来之后，也告诉我，没关系，可以报xds，安稳。<br>后来，校线出来，不得已调剂，没关系，过不了我们可以报xds。<br>去GZ复试，你想去就去吧，过不了也没事。<br>接到JD的三面试电话，她并不开心。她说，看你这么忙，我们报一个xds试试吧。<br>######直到现在，我也不明白，内心的抗拒究竟是对安稳生活的抵触或者对新生活的渴望，还是不愿意听到一次又一次的“劝谏”。<br>我们各执一词，谁都无法说服谁。<br>其实每次吵架，我事后都会非常后悔。<br>但是还是不想放弃决定自己未来的权利。<br>而且永远没有办法和她讲道理，我告诉她说现在报名的特别多，她说没事啊，反正你学习好。<br>我说我从大学以来，都没有话几天准备过一次考试，基本上都在半个月以上，她说没事啊，反正不考数学，我相信你。<br>可是，我已经过了相信自己的时候了。<br>因为，我也曾相信过自己，可以考到北交通。<br>######现在参加考试，就是把曾经的伤疤，一层一层揭开，让你强行回忆过去一年的点点滴滴，回忆最后24号25号在考场经历的一切，然后暴露在阳光下，然后指着它，对每一个过路人说，你看，我曾经失败过。<br>######我真的累了。<br>也许几年后，重新审视生活的时候，我会向往十八线城市的日子。<br>可未来那么远，为什么不能让我按自己的心愿过好当下呢？<br>我并不觉得，进国企或者私企比体制内更低。<br>家长们永远有自己的道理，我也想有自己的坚持。<br>自己确实从小就是别人家的“乖孩子”,<br>这一次，好像用上了青春期以来所有的叛逆。<br></font>  
+
       
 
       
@@ -208,7 +208,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">python渣渣想要变得厉害</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -218,7 +218,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/08/再遇python/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/04/08/爱-别离/">展开全文 >></a>
         </p>
       
 
@@ -248,27 +248,28 @@
 
 
   
-    <article id="w-我会有猫的" class="article article-type-w  article-index" itemscope itemprop="blogPost">
+    <article id="w-再遇python" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
+      <a class="article-title" href="/2018/04/08/再遇python/">再遇python</a>
     </h1>
   
 
         
-        <a href="/2018/04/05/我会有猫的/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
+        <a href="/2018/04/08/再遇python/" class="archive-article-date">
+  	<time datetime="2018-04-08T01:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font face="微软雅黑" color="black" size="4"><br>#立flag 好好赚钱<br>##争取早日把主人带回家<br><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/20180407.jpg?raw=true" alt=""><br></font>
+        <p>####简单爬虫-豆瓣电影<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests  <span class="comment"># 导入网页请求库(简单模拟用户发送请求）</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup  <span class="comment"># 导入网页解析库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 传入URL</span></span><br><span class="line"></span><br><span class="line">r = requests.get(<span class="string">'https://movie.douban.com/chart'</span>)  <span class="comment"># 模拟用户请求，请求成功，服务器会相应！</span></span><br><span class="line"><span class="comment"># print(r.text)  此处可以测试服务器是否正确响应</span></span><br><span class="line"><span class="comment"># 解析URL</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(r.text, <span class="string">'html.parser'</span>)  <span class="comment"># 简单理解成把服务器传过来的html规范化</span></span><br><span class="line">contentList = soup.find_all(<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">'pl2'</span>&#125;)  <span class="comment"># 根据你所设置的过滤条件来过滤其中的信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 迭代List中的所有信息：</span></span><br><span class="line">print(len(contentList))  <span class="comment"># 看看有多少条</span></span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> contentList:  </span><br><span class="line">	print(content.a.text)  <span class="comment"># 从浏览器检查元素可知标签div下的a中文字</span></span><br></pre></td></tr></table></figure></p>
+<font face="微软雅黑" color="black" size="4"><br>&gt; 感恩宝哥<br></font>
       
 
       
@@ -281,7 +282,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python小白的进阶之路</a>
         		</li>
       		
 		</ul>
@@ -291,7 +292,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/05/我会有猫的/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/04/08/再遇python/">展开全文 >></a>
         </p>
       
 
@@ -365,6 +366,79 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/05/我不想写论文/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="w-我会有猫的" class="article article-type-w  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/05/我会有猫的/" class="archive-article-date">
+  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font face="微软雅黑" color="black" size="4"><br>#立flag 好好赚钱<br>##争取早日把主人带回家<br><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/20180407.jpg?raw=true" alt=""><br></font>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/05/我会有猫的/">展开全文 >></a>
         </p>
       
 
@@ -560,15 +634,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">python渣渣想要变得厉害</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
+                <a href="javascript:void(0)" class="js-tag color4">python小白的进阶之路</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
               </li>
              
               <li class="article-tag-list-item">

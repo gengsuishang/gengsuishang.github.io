@@ -9,14 +9,14 @@
   <title>再遇python | 莞尔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="####简单爬虫-豆瓣电影1234567891011121314151617import requests  # 导入网页请求库(简单模拟用户发送请求）from bs4 import BeautifulSoup  # 导入网页解析库# 传入URLr = requests.get(&apos;https://movie.douban.com/chart&apos;)  # 模拟用户请求，请求成功，服务器会相应！# pr">
-<meta name="keywords" content="python渣渣想要变得厉害">
+<meta name="keywords" content="python小白的进阶之路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="再遇python">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/再遇python/index.html">
 <meta property="og:site_name" content="莞尔的博客">
 <meta property="og:description" content="####简单爬虫-豆瓣电影1234567891011121314151617import requests  # 导入网页请求库(简单模拟用户发送请求）from bs4 import BeautifulSoup  # 导入网页解析库# 传入URLr = requests.get(&apos;https://movie.douban.com/chart&apos;)  # 模拟用户请求，请求成功，服务器会相应！# pr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-08T02:21:11.590Z">
+<meta property="og:updated_time" content="2018-04-08T02:40:56.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再遇python">
 <meta name="twitter:description" content="####简单爬虫-豆瓣电影1234567891011121314151617import requests  # 导入网页请求库(简单模拟用户发送请求）from bs4 import BeautifulSoup  # 导入网页解析库# 传入URLr = requests.get(&apos;https://movie.douban.com/chart&apos;)  # 模拟用户请求，请求成功，服务器会相应！# pr">
@@ -198,7 +198,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>####简单爬虫-豆瓣电影<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests  <span class="comment"># 导入网页请求库(简单模拟用户发送请求）</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup  <span class="comment"># 导入网页解析库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 传入URL</span></span><br><span class="line"></span><br><span class="line">r = requests.get(<span class="string">'https://movie.douban.com/chart'</span>)  <span class="comment"># 模拟用户请求，请求成功，服务器会相应！</span></span><br><span class="line"><span class="comment"># print(r.text)  此处可以测试服务器是否正确响应</span></span><br><span class="line"><span class="comment"># 解析URL</span></span><br><span class="line"></span><br><span class="line">soup = BeautifulSoup(r.text, <span class="string">'html.parser'</span>)  <span class="comment"># 简单理解成把服务器传过来的html规范化</span></span><br><span class="line">contentList = soup.find_all(<span class="string">'div'</span>, attrs=&#123;<span class="string">'class'</span>: <span class="string">'pl2'</span>&#125;)  <span class="comment"># 根据你所设置的过滤条件来过滤其中的信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 迭代List中的所有信息：</span></span><br><span class="line">print(len(contentList))  <span class="comment"># 看看有多少条</span></span><br><span class="line"><span class="keyword">for</span> content <span class="keyword">in</span> contentList:  </span><br><span class="line">	print(content.a.text)  <span class="comment"># 从浏览器检查元素可知标签div下的a中文字</span></span><br></pre></td></tr></table></figure></p>
-<font face="微软雅黑" color="black" size="4"><br><br><br></font>
+<font face="微软雅黑" color="black" size="4"><br>&gt; 感恩宝哥<br></font>
       
 
       
@@ -242,7 +242,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">python渣渣想要变得厉害</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python小白的进阶之路</a>
         		</li>
       		
 		</ul>
@@ -312,9 +312,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/04/08/爱-别离/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          爱-别离
+        
+      </div>
+    </a>
   
-    <a href="/2018/04/05/我会有猫的/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我会有猫的！</div>
+  
+    <a href="/2018/04/05/我不想写论文/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我一定会写完论文的！</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -481,15 +490,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">python渣渣想要变得厉害</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
+                <a href="javascript:void(0)" class="js-tag color4">python小白的进阶之路</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
               </li>
              
               <li class="article-tag-list-item">
