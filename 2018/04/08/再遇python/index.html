@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>再遇python | 莞尔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="####简单爬虫-豆瓣电影">
+  <meta name="description" content="####简单爬虫-豆瓣电影    python      import requests  # 导入网页请求库(简单模拟用户发送请求）     from bs4 import BeautifulSoup  # 导入网页解析库      # 传入URL      r = requests.get(&amp;#39;https://movie.douban.com/chart&amp;#39;)  # 模拟用户请求，">
 <meta name="keywords" content="python渣渣想要变得厉害">
 <meta property="og:type" content="article">
 <meta property="og:title" content="再遇python">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/再遇python/index.html">
 <meta property="og:site_name" content="莞尔的博客">
-<meta property="og:description" content="####简单爬虫-豆瓣电影">
+<meta property="og:description" content="####简单爬虫-豆瓣电影    python      import requests  # 导入网页请求库(简单模拟用户发送请求）     from bs4 import BeautifulSoup  # 导入网页解析库      # 传入URL      r = requests.get(&amp;#39;https://movie.douban.com/chart&amp;#39;)  # 模拟用户请求，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-08T01:44:03.316Z">
+<meta property="og:updated_time" content="2018-04-08T02:02:27.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再遇python">
-<meta name="twitter:description" content="####简单爬虫-豆瓣电影">
+<meta name="twitter:description" content="####简单爬虫-豆瓣电影    python      import requests  # 导入网页请求库(简单模拟用户发送请求）     from bs4 import BeautifulSoup  # 导入网页解析库      # 传入URL      r = requests.get(&amp;#39;https://movie.douban.com/chart&amp;#39;)  # 模拟用户请求，">
   
     <link rel="alternative" href="/atom.xml" title="莞尔的博客" type="application/atom+xml">
   
@@ -197,7 +197,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font face="微软雅黑" color="black" size="4"><br>####简单爬虫-豆瓣电影<br><br></font>
+        <font face="微软雅黑" color="black" size="4"><br>####简单爬虫-豆瓣电影<br>    <code>python 
+    import requests  # 导入网页请求库(简单模拟用户发送请求）
+    from bs4 import BeautifulSoup  # 导入网页解析库
+
+    # 传入URL
+
+    r = requests.get(&#39;https://movie.douban.com/chart&#39;)  # 模拟用户请求，请求成功，服务器会相应！
+    # print(r.text)  此处可以测试服务器是否正确响应
+    # 解析URL
+
+    soup = BeautifulSoup(r.text, &#39;html.parser&#39;)  # 简单理解成把服务器传过来的html规范化
+    contentList = soup.find_all(&#39;div&#39;, attrs={&#39;class&#39;: &#39;pl2&#39;})  # 根据你所设置的过滤条件来过滤其中的信息
+
+    # 迭代List中的所有信息：
+    print(len(contentList))  # 看看有多少条
+    for content in contentList:
+         print(content.a.text)  # 从浏览器检查元素可知标签div下的a中文字</code><br>&gt; 感恩宝哥~<br></font>
       
 
       
@@ -312,8 +328,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/04/05/我不想写论文/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我一定会写完论文的！</div>
+    <a href="/2018/04/05/我会有猫的/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我会有猫的！</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -480,11 +496,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">python渣渣想要变得厉害</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -492,7 +504,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">python渣渣想要变得厉害</a>
+                <a href="javascript:void(0)" class="js-tag color3">随记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
