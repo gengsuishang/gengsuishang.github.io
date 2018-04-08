@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 莞尔的博客</title>
+  <title>再遇python | 莞尔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="莞尔的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="####简单爬虫-豆瓣电影&amp;gt;&amp;gt;     import requests  # 导入网页请求库(简单模拟用户发送请求）&amp;gt;     from bs4 import BeautifulSoup  # 导入网页解析库&amp;gt;     # 传入URL&amp;gt;     r = requests.get(‘https://movie.douban.com/chart&amp;#39;)  &amp;gt;">
+<meta name="keywords" content="python渣渣想要变得厉害">
+<meta property="og:type" content="article">
+<meta property="og:title" content="再遇python">
+<meta property="og:url" content="http://yoursite.com/2018/04/08/再遇python/index.html">
 <meta property="og:site_name" content="莞尔的博客">
+<meta property="og:description" content="####简单爬虫-豆瓣电影&amp;gt;&amp;gt;     import requests  # 导入网页请求库(简单模拟用户发送请求）&amp;gt;     from bs4 import BeautifulSoup  # 导入网页解析库&amp;gt;     # 传入URL&amp;gt;     r = requests.get(‘https://movie.douban.com/chart&amp;#39;)  &amp;gt;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-08T01:32:19.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="莞尔的博客">
+<meta name="twitter:title" content="再遇python">
+<meta name="twitter:description" content="####简单爬虫-豆瓣电影&amp;gt;&amp;gt;     import requests  # 导入网页请求库(简单模拟用户发送请求）&amp;gt;     from bs4 import BeautifulSoup  # 导入网页解析库&amp;gt;     # 传入URL&amp;gt;     r = requests.get(‘https://movie.douban.com/chart&amp;#39;)  &amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="莞尔的博客" type="application/atom+xml">
   
@@ -172,36 +177,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="w-再遇python" class="article article-type-w " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/08/再遇python/" class="archive-article-date">
-  	<time datetime="2018-04-08T01:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/08/再遇python/">再遇python</a>
+    <h1 class="article-title" itemprop="name">
+      再遇python
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/04/08/再遇python/" class="archive-article-date">
+  	<time datetime="2018-04-08T01:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font face="微软雅黑" color="black" size="4"><br>####简单爬虫-豆瓣电影<br>&gt;<br>&gt;     import requests  # 导入网页请求库(简单模拟用户发送请求）<br>&gt;     from bs4 import BeautifulSoup  # 导入网页解析库<br>&gt;     # 传入URL<br>&gt;     r = requests.get(‘<a href="https://movie.douban.com/chart&#39;" target="_blank" rel="noopener">https://movie.douban.com/chart&#39;</a>)  &gt;     # 模拟用户请求，请求成功，服务器会相应！<br>&gt;     # print(r.text)  此处可以测试服务器是否正确响应,打印出来一堆东西<br>&gt;     # 解析URL<br>&gt;     soup = BeautifulSoup(r.text, ‘html.parser’)  # 简单理解成把服务器传过来的html规范化<br>&gt;     contentList = soup.find_all(‘div’, attrs={‘class’: ‘pl2’})  # 找到class是pl2的div<br><br>&gt;     # 迭代List中的所有信息：<br>&gt;     print(len(contentList))  # 看看有多少条<br>&gt;     for content in contentList:<br>&gt;         print(content.a.text)  # 从浏览器检查元素可知标签div下的a中文字<br>#####结果<br>&gt;                        奇迹男孩<br>&gt;                        / 奇迹<br>&gt;                        至暗时刻<br>&gt;                        / 最黑暗的时刻(台) / 黑暗对峙(港)<br>&gt;                         大佛普拉斯<br>&gt;                        / The Great Buddha+<br>&gt;                         与神同行<br>&gt;                         / 与神一起 / 与神同在<br>&gt;                         魅影缝匠<br>&gt;                        / 霓裳魅影(港/台) / 幽冥端绪<br>&gt;                         伯德小姐<br>&gt;                        / 淑女鸟(台) / 不得鸟小姐(港)<br>&gt;                         祖宗十九代<br>&gt;                         / The Faces of My Gene<br>&gt;                         金钱世界<br>&gt;                         / 万恶金钱(港) / 世上所有的财富<br>&gt;                         前任3：再见前任<br>&gt;                         / 前任3 / 前任攻略3<br>&gt;                         南极之恋<br>&gt;                         / 南极绝恋 / Till the End of the World<br>感恩宝哥<br></font>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>❤<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipy.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpy.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,133 +247,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/08/再遇python/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/我会有猫的/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/05/我会有猫的/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我会有猫的！</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="再遇python" data-title="再遇python" data-url="http://yoursite.com/2018/04/08/再遇python/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2018/04/08/再遇python/", 
+    sourceId: "再遇python",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/梦里不知身是客/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/梦里不知身是客/">梦里不知身是客</a>
-    </h1>
+  <div id="SOHUCS" sid="再遇python" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/我不想写论文/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/我不想写论文/">我一定会写完论文的！</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -362,8 +410,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
