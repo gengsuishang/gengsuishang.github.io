@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 莞尔的博客</title>
+  <title>数据可视化 | 莞尔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="莞尔的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="####柱形图&amp;amp;折线图     import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,5">
+<meta name="keywords" content="python小白的进阶之路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化">
+<meta property="og:url" content="http://yoursite.com/2018/04/09/可视化/index.html">
 <meta property="og:site_name" content="莞尔的博客">
+<meta property="og:description" content="####柱形图&amp;amp;折线图     import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,5">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-09T04:38:35.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="莞尔的博客">
+<meta name="twitter:title" content="数据可视化">
+<meta name="twitter:description" content="####柱形图&amp;amp;折线图     import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,5">
   
     <link rel="alternative" href="/atom.xml" title="莞尔的博客" type="application/atom+xml">
   
@@ -172,36 +177,108 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="w-可视化" class="article article-type-w " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数据可视化
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/09/可视化/" class="archive-article-date">
+
+        
+        <a href="/2018/04/09/可视化/" class="archive-article-date">
   	<time datetime="2018-04-09T03:20:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-09</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/09/可视化/">数据可视化</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>####柱形图&amp;折线图   </p>
+<pre><code class="python">
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
 
-        <div class="article-info info-on-right">
-          
+list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]
+list_gdp = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]
+plt.bar(list_year,list_gdp)<span class="comment">#柱形图</span>
+plt.plot(list_year,list_gdp)<span class="comment">#折线图</span>
+plt.title(<span class="string">'gdp amount from 2006 to 2017'</span>)
+plt.xlabel(<span class="string">'year'</span>)
+plt.ylabel(<span class="string">'gdp'</span>)
+plt.show()
+</code></pre>
+<p>结果：</p>
+<p>####饼图</p>
+<pre><code class="python">
+<span class="comment">#定义一个字典</span>
+   gdp_2017={  
+<span class="string">'primary industry'</span>:<span class="number">65468</span>,
+<span class="string">'secondary industry'</span>:<span class="number">334623</span>,
+<span class="string">'tertiary industry'</span>:<span class="number">427032</span>
+}
+<span class="comment">#取出gdp的类别列表和gdp列表</span>
+labels=gdp_2017.keys()
+values=gdp_2017.values()
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="comment">#设置图形大小</span>
+plt.figure(figsize=(<span class="number">6</span>,<span class="number">6</span>))
+<span class="comment">#画图</span>
+<span class="comment">#startangle表示起始角度</span>
+plt.pie(values,
+        labels=labels,
+        autopct=<span class="string">'%.1f%%'</span>,
+        startangle=<span class="number">90</span>
+        )
+<span class="comment">#设置样式扁平</span>
+plt.axis(<span class="string">'equal'</span>)
+<span class="comment">#显示图例</span>
+plt.legend()
+<span class="comment">#显示图片</span>
+plt.show()
+</code></pre>
+<p>结果：</p>
+<font face="微软雅黑" color="black" size="4"><br></font>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>❤<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipy.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechatpy.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -213,209 +290,147 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/09/可视化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/08/爱-别离/" class="archive-article-date">
-  	<time datetime="2018-04-08T04:42:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/08/爱-别离/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">爱-别离</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/08/爱-别离/">爱-别离</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="可视化" data-title="数据可视化" data-url="http://yoursite.com/2018/04/09/可视化/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2018/04/09/可视化/", 
+    sourceId: "可视化",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/08/再遇python/" class="archive-article-date">
-  	<time datetime="2018-04-08T01:32:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/08/再遇python/">再遇python</a>
-    </h1>
+  <div id="SOHUCS" sid="可视化" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python小白的进阶之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/我会有猫的/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/梦里不知身是客/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/梦里不知身是客/">梦里不知身是客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/我不想写论文/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/我不想写论文/">我一定会写完论文的！</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -438,8 +453,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
