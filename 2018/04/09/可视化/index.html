@@ -8,18 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据可视化 | 莞尔的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="######柱形图&amp;amp;折线图123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869	import matplotlib.pyplot as plt	list_year = [2006,200">
+  <meta name="description" content="柱形图&amp;amp;折线图    import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,540367">
 <meta name="keywords" content="python小白的进阶之路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据可视化">
 <meta property="og:url" content="http://yoursite.com/2018/04/09/可视化/index.html">
 <meta property="og:site_name" content="莞尔的博客">
-<meta property="og:description" content="######柱形图&amp;amp;折线图123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869	import matplotlib.pyplot as plt	list_year = [2006,200">
+<meta property="og:description" content="柱形图&amp;amp;折线图    import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,540367">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-10T08:16:29.325Z">
+<meta property="og:image" content="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/Figure_1.png?raw=true">
+<meta property="og:image" content="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure_3.jpg?raw=true">
+<meta property="og:image" content="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure03.jpg?raw=true">
+<meta property="og:updated_time" content="2018-04-10T08:23:30.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据可视化">
-<meta name="twitter:description" content="######柱形图&amp;amp;折线图123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869	import matplotlib.pyplot as plt	list_year = [2006,200">
+<meta name="twitter:description" content="柱形图&amp;amp;折线图    import matplotlib.pyplot as plt  list_year = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017] list_gdp = [219438.50,270232.30,319515.50,349081.40,413030.30,489300.60,540367">
+<meta name="twitter:image" content="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/Figure_1.png?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="莞尔的博客" type="application/atom+xml">
   
@@ -197,7 +201,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>######柱形图&amp;折线图<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">	list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]</span><br><span class="line">	list_gdp = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]</span><br><span class="line">	plt.bar(list_year,list_gdp)<span class="comment">#柱形图</span></span><br><span class="line">    plt.plot(list_year,list_gdp)<span class="comment">#折线图</span></span><br><span class="line">	plt.title(<span class="string">'gdp amount from 2006 to 2017'</span>)</span><br><span class="line">	plt.xlabel(<span class="string">'year'</span>)</span><br><span class="line">	plt.ylabel(<span class="string">'gdp'</span>)</span><br><span class="line">	plt.show()</span><br><span class="line">```  </span><br><span class="line">结果：  </span><br><span class="line">![](https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/Figure_1.png?raw=true)</span><br><span class="line"><span class="comment">######饼图</span></span><br><span class="line">```python</span><br><span class="line">	</span><br><span class="line">	<span class="comment">#定义一个字典</span></span><br><span class="line">   	gdp_2017=&#123;  </span><br><span class="line">    <span class="string">'primary industry'</span>:<span class="number">65468</span>,</span><br><span class="line">    <span class="string">'secondary industry'</span>:<span class="number">334623</span>,</span><br><span class="line">    <span class="string">'tertiary industry'</span>:<span class="number">427032</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">#取出gdp的类别列表和gdp列表</span></span><br><span class="line">	labels=gdp_2017.keys()</span><br><span class="line">	values=gdp_2017.values()</span><br><span class="line">	<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">	<span class="comment">#设置图形大小</span></span><br><span class="line">	plt.figure(figsize=(<span class="number">6</span>,<span class="number">6</span>))</span><br><span class="line">	<span class="comment">#画图</span></span><br><span class="line">	<span class="comment">#startangle表示起始角度</span></span><br><span class="line">	plt.pie(values,</span><br><span class="line">       	 labels=labels,</span><br><span class="line">       	 autopct=<span class="string">'%.1f%%'</span>,</span><br><span class="line">        	startangle=<span class="number">90</span></span><br><span class="line">       	 )</span><br><span class="line">	<span class="comment">#设置样式扁平</span></span><br><span class="line">	plt.axis(<span class="string">'equal'</span>)</span><br><span class="line">	<span class="comment">#显示图例</span></span><br><span class="line">	plt.legend()</span><br><span class="line">	<span class="comment">#显示图片</span></span><br><span class="line">	plt.show()</span><br><span class="line">```  </span><br><span class="line">结果： </span><br><span class="line">![](https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure_3.jpg?raw=true)  </span><br><span class="line"> </span><br><span class="line">```python    </span><br><span class="line">	<span class="comment">#准备数据</span></span><br><span class="line">	list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]</span><br><span class="line">	list_gdp  = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]</span><br><span class="line">	list_gdp_growth = [<span class="number">12.70</span>,<span class="number">14.20</span>,<span class="number">9.70</span>,<span class="number">9.40</span>,<span class="number">10.60</span>,<span class="number">9.50</span>,<span class="number">7.90</span>,<span class="number">7.80</span>,<span class="number">7.30</span>,<span class="number">6.90</span>,<span class="number">6.70</span>,<span class="number">6.90</span>]</span><br><span class="line">	<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">	<span class="comment">#设置大小</span></span><br><span class="line">	fig=plt.figure(figsize=(<span class="number">8</span>,<span class="number">6</span>))</span><br><span class="line">	<span class="comment">#画柱状图</span></span><br><span class="line">	ax1=fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">	ax1.bar(list_year,list_gdp,label=<span class="string">'gdp amount'</span>)</span><br><span class="line">	ax1.legend(loc=<span class="string">'upper left'</span>)</span><br><span class="line">	ax1.set_xlabel(<span class="string">'year'</span>)</span><br><span class="line">	ax1.set_ylabel(<span class="string">'gdp amount'</span>)</span><br><span class="line">	<span class="comment">#画折线图</span></span><br><span class="line">	ax2=ax1.twinx()<span class="comment">#关键设置</span></span><br><span class="line">	ax2.plot(list_year,list_gdp_growth,color=<span class="string">'yellow'</span>,label=<span class="string">'gdp growth'</span>)</span><br><span class="line">	ax2.legend(loc=<span class="string">'upper right'</span>)</span><br><span class="line">	ax2.set_ylabel(<span class="string">'gdp growth'</span>)</span><br><span class="line">	ax2.set_ylim(<span class="number">0</span>,<span class="number">20</span>)</span><br><span class="line">	<span class="comment"># 标识标题及坐标轴信息</span></span><br><span class="line">	plt.title(<span class="string">'gdp amount / growth from 2006 to 2017'</span>)</span><br><span class="line">	plt.show()</span><br></pre></td></tr></table></figure></p>
+        <h2 id="柱形图-amp-折线图"><a href="#柱形图-amp-折线图" class="headerlink" title="柱形图&amp;折线图   "></a>柱形图&amp;折线图   </h2><pre><code class="python">
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+
+list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]
+list_gdp = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]
+plt.bar(list_year,list_gdp)<span class="comment">#柱形图</span>
+plt.plot(list_year,list_gdp)<span class="comment">#折线图</span>
+plt.title(<span class="string">'gdp amount from 2006 to 2017'</span>)
+plt.xlabel(<span class="string">'year'</span>)
+plt.ylabel(<span class="string">'gdp'</span>)
+plt.show()
+</code></pre>
+<h2 id="结果："><a href="#结果：" class="headerlink" title="结果：  "></a>结果：  </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/Figure_1.png?raw=true" alt="">  </p>
+<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图  "></a>饼图  </h2><pre><code class="python">
+<span class="comment">#定义一个字典</span>
+   gdp_2017={  
+<span class="string">'primary industry'</span>:<span class="number">65468</span>,
+<span class="string">'secondary industry'</span>:<span class="number">334623</span>,
+<span class="string">'tertiary industry'</span>:<span class="number">427032</span>
+}
+<span class="comment">#取出gdp的类别列表和gdp列表</span>
+labels=gdp_2017.keys()
+values=gdp_2017.values()
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="comment">#设置图形大小</span>
+plt.figure(figsize=(<span class="number">6</span>,<span class="number">6</span>))
+<span class="comment">#画图</span>
+<span class="comment">#startangle表示起始角度</span>
+plt.pie(values,
+        labels=labels,
+        autopct=<span class="string">'%.1f%%'</span>,
+        startangle=<span class="number">90</span>
+        )
+<span class="comment">#设置样式扁平</span>
+plt.axis(<span class="string">'equal'</span>)
+<span class="comment">#显示图例</span>
+plt.legend()
+<span class="comment">#显示图片</span>
+plt.show()
+</code></pre>
+<h2 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果： "></a>结果： </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure_3.jpg?raw=true" alt="">  </p>
+<pre><code class="python"><span class="comment">#准备数据</span>
+list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]
+list_gdp  = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]
+list_gdp_growth = [<span class="number">12.70</span>,<span class="number">14.20</span>,<span class="number">9.70</span>,<span class="number">9.40</span>,<span class="number">10.60</span>,<span class="number">9.50</span>,<span class="number">7.90</span>,<span class="number">7.80</span>,<span class="number">7.30</span>,<span class="number">6.90</span>,<span class="number">6.70</span>,<span class="number">6.90</span>]
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="comment">#设置大小</span>
+fig=plt.figure(figsize=(<span class="number">8</span>,<span class="number">6</span>))
+<span class="comment">#画柱状图</span>
+ax1=fig.add_subplot(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>)
+ax1.bar(list_year,list_gdp,label=<span class="string">'gdp amount'</span>)
+ax1.legend(loc=<span class="string">'upper left'</span>)
+ax1.set_xlabel(<span class="string">'year'</span>)
+ax1.set_ylabel(<span class="string">'gdp amount'</span>)
+<span class="comment">#画折线图</span>
+ax2=ax1.twinx()<span class="comment">#关键设置</span>
+ax2.plot(list_year,list_gdp_growth,color=<span class="string">'yellow'</span>,label=<span class="string">'gdp growth'</span>)
+ax2.legend(loc=<span class="string">'upper right'</span>)
+ax2.set_ylabel(<span class="string">'gdp growth'</span>)
+ax2.set_ylim(<span class="number">0</span>,<span class="number">20</span>)
+<span class="comment"># 标识标题及坐标轴信息</span>
+plt.title(<span class="string">'gdp amount / growth from 2006 to 2017'</span>)
+plt.show()
+</code></pre>
+<h2 id="结果：-2"><a href="#结果：-2" class="headerlink" title="结果：  "></a>结果：  </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure03.jpg?raw=true" alt=""></p>
 <font face="微软雅黑" color="black" size="4"><br></font>
       
 
@@ -481,19 +549,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">python小白的进阶之路</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
