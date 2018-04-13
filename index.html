@@ -263,9 +263,14 @@ plt.show()
 list_gdp  = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]
 list_gdp_growth = [<span class="number">12.70</span>,<span class="number">14.20</span>,<span class="number">9.70</span>,<span class="number">9.40</span>,<span class="number">10.60</span>,<span class="number">9.50</span>,<span class="number">7.90</span>,<span class="number">7.80</span>,<span class="number">7.30</span>,<span class="number">6.90</span>,<span class="number">6.70</span>,<span class="number">6.90</span>]
 <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+<span class="comment">#使用默认字体，图例设置为仿宋</span>
+<span class="comment">#import matplotlib.pylab as mpl</span>
+<span class="comment">#mpl.rcParams['font.sans-serif']=['FangSong']</span>
 fig=plt.figure(figsize=(<span class="number">8</span>,<span class="number">6</span>))
 <span class="comment">#画柱状图</span>
 ax1=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)
+<span class="comment">#若为左右结构一行两列第一个</span>
+ax1=fig.add_subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)
 ax1.bar(list_year,list_gdp,label=<span class="string">'gdp amount'</span>)
 ax1.legend(loc=<span class="string">'upper left'</span>)
 ax1.set_xlabel(<span class="string">'year'</span>)
@@ -273,6 +278,8 @@ ax1.set_ylabel(<span class="string">'gdp amount'</span>)
 ax1.set_title(<span class="string">'gdp amount from 2006-2017'</span>)
 <span class="comment">#画折线图</span>
 ax2=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)<span class="comment">#关键设置</span>
+<span class="comment">#左右结构一行两列第二个</span>
+ax2=fig.add_subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)
 ax2.plot(list_year,list_gdp_growth,color=<span class="string">'yellow'</span>,label=<span class="string">'gdp growth'</span>)
 ax2.legend(loc=<span class="string">'upper right'</span>)
 ax2.set_ylabel(<span class="string">'gdp growth'</span>)
@@ -283,7 +290,8 @@ ax2.grid(<span class="keyword">True</span>)
 plt.tight_layout()
 plt.show()  
 </code></pre>
-<h2 id="结果"><a href="#结果" class="headerlink" title="结果  "></a>结果  </h2><font face="微软雅黑" color="black" size="4"><br></font>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果  "></a>结果  </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/20180413104712.jpg?raw=true" alt=""></p>
+<font face="微软雅黑" color="black" size="4"><br></font>
       
 
       
@@ -576,79 +584,6 @@ print(len(contentList))  <span class="comment"># 看看有多少条</span>
 
 
   
-    <article id="w-梦里不知身是客" class="article article-type-w  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/05/梦里不知身是客/">梦里不知身是客</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/05/梦里不知身是客/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font face="微软雅黑" color="black" size="4"><br>梦里不知身是客 一晌贪欢<br><br>不让你的眼睛  再看见人事的伤心<br>投入风里雨里相依为命<br>看着你的眼睛<br>有太多太多泪不停<br>心疼你每一步走的艰辛<br>苦难的梦特别真心<br>&lt;记健哥和小岳岳深情望着对方的眼睛&gt;<br></font>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/05/梦里不知身是客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="w-我不想写论文" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -693,6 +628,79 @@ print(len(contentList))  <span class="comment"># 看看有多少条</span>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/05/我不想写论文/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="w-梦里不知身是客" class="article article-type-w  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/05/梦里不知身是客/">梦里不知身是客</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/05/梦里不知身是客/" class="archive-article-date">
+  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font face="微软雅黑" color="black" size="4"><br>梦里不知身是客 一晌贪欢<br><br>不让你的眼睛  再看见人事的伤心<br>投入风里雨里相依为命<br>看着你的眼睛<br>有太多太多泪不停<br>心疼你每一步走的艰辛<br>苦难的梦特别真心<br>&lt;记健哥和小岳岳深情望着对方的眼睛&gt;<br></font>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/05/梦里不知身是客/">展开全文 >></a>
         </p>
       
 
@@ -815,19 +823,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">python小白的进阶之路</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
