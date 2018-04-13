@@ -258,8 +258,32 @@ ax2.set_ylim(<span class="number">0</span>,<span class="number">20</span>)
 plt.title(<span class="string">'gdp amount / growth from 2006 to 2017'</span>)
 plt.show()
 </code></pre>
-<h2 id="结果：-2"><a href="#结果：-2" class="headerlink" title="结果：  "></a>结果：  </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure03.jpg?raw=true" alt=""></p>
-<font face="微软雅黑" color="black" size="4"><br></font>
+<h2 id="结果：-2"><a href="#结果：-2" class="headerlink" title="结果：  "></a>结果：  </h2><p><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/figure03.jpg?raw=true" alt="">  </p>
+<h2 id="同时显示多幅子图"><a href="#同时显示多幅子图" class="headerlink" title="同时显示多幅子图  "></a>同时显示多幅子图  </h2><pre><code class="python">list_year = [<span class="number">2006</span>,<span class="number">2007</span>,<span class="number">2008</span>,<span class="number">2009</span>,<span class="number">2010</span>,<span class="number">2011</span>,<span class="number">2012</span>,<span class="number">2013</span>,<span class="number">2014</span>,<span class="number">2015</span>,<span class="number">2016</span>,<span class="number">2017</span>]
+list_gdp  = [<span class="number">219438.50</span>,<span class="number">270232.30</span>,<span class="number">319515.50</span>,<span class="number">349081.40</span>,<span class="number">413030.30</span>,<span class="number">489300.60</span>,<span class="number">540367.40</span>,<span class="number">595244.40</span>,<span class="number">643974.00</span>,<span class="number">689052.10</span>,<span class="number">744127.20</span>,<span class="number">827122.00</span>]
+list_gdp_growth = [<span class="number">12.70</span>,<span class="number">14.20</span>,<span class="number">9.70</span>,<span class="number">9.40</span>,<span class="number">10.60</span>,<span class="number">9.50</span>,<span class="number">7.90</span>,<span class="number">7.80</span>,<span class="number">7.30</span>,<span class="number">6.90</span>,<span class="number">6.70</span>,<span class="number">6.90</span>]
+<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+fig=plt.figure(figsize=(<span class="number">8</span>,<span class="number">6</span>))
+<span class="comment">#画柱状图</span>
+ax1=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>)
+ax1.bar(list_year,list_gdp,label=<span class="string">'gdp amount'</span>)
+ax1.legend(loc=<span class="string">'upper left'</span>)
+ax1.set_xlabel(<span class="string">'year'</span>)
+ax1.set_ylabel(<span class="string">'gdp amount'</span>)
+ax1.set_title(<span class="string">'gdp amount from 2006-2017'</span>)
+<span class="comment">#画折线图</span>
+ax2=fig.add_subplot(<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>)<span class="comment">#关键设置</span>
+ax2.plot(list_year,list_gdp_growth,color=<span class="string">'yellow'</span>,label=<span class="string">'gdp growth'</span>)
+ax2.legend(loc=<span class="string">'upper right'</span>)
+ax2.set_ylabel(<span class="string">'gdp growth'</span>)
+ax2.set_ylim(<span class="number">0</span>,<span class="number">15</span>)
+ax2.set_title(<span class="string">'gdp growth from 2006-2017'</span>)
+ax2.grid(<span class="keyword">True</span>)
+<span class="comment">#调整子图之间的间距</span>
+plt.tight_layout()
+plt.show()  
+</code></pre>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果  "></a>结果  </h2><font face="微软雅黑" color="black" size="4"><br></font>
       
 
       
