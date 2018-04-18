@@ -174,6 +174,58 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-pyecharts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>layout: w<br>title: 再遇python<br>date: 2018-04-18 16:32:11</p>
+<h2 id="tags-python小白的进阶之路"><a href="#tags-python小白的进阶之路" class="headerlink" title="tags: python小白的进阶之路"></a>tags: python小白的进阶之路</h2><h2 id="堆叠图"><a href="#堆叠图" class="headerlink" title="堆叠图  "></a>堆叠图  </h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar</span><br><span class="line">	bar=Bar(<span class="string">'My first chat'</span>,<span class="string">'This is title'</span>)</span><br><span class="line">	bar = Bar(<span class="string">"我的第一个图表"</span>, <span class="string">"这里是副标题"</span>)</span><br><span class="line">	bar.add(<span class="string">"服装"</span>, [<span class="string">"衬衫"</span>, <span class="string">"羊毛衫"</span>, <span class="string">"雪纺衫"</span>, <span class="string">"裤子"</span>, <span class="string">"高跟鞋"</span>, <span class="string">"袜子"</span>], [<span class="number">5</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">10</span>, <span class="number">75</span>, <span class="number">90</span>])</span><br><span class="line">	bar.show_config()</span><br><span class="line">	bar.render()</span><br><span class="line">	attr = [<span class="string">"衬衫"</span>, <span class="string">"羊毛衫"</span>, <span class="string">"雪纺衫"</span>, <span class="string">"裤子"</span>, <span class="string">"高跟鞋"</span>, <span class="string">"袜子"</span>]</span><br><span class="line">	v1 = [<span class="number">5</span>, <span class="number">20</span>, <span class="number">36</span>, <span class="number">10</span>, <span class="number">75</span>, <span class="number">90</span>]</span><br><span class="line">	v2 = [<span class="number">10</span>, <span class="number">25</span>, <span class="number">8</span>, <span class="number">60</span>, <span class="number">20</span>, <span class="number">80</span>]</span><br><span class="line">	bar = Bar(<span class="string">"柱状图数据堆叠示例"</span>)</span><br><span class="line">	bar.add(<span class="string">"商家A"</span>, attr, v1, is_stack=<span class="keyword">True</span>)</span><br><span class="line">	bar.add(<span class="string">"商家B"</span>, attr, v2, is_stack=<span class="keyword">True</span>)</span><br><span class="line">	bar.render()</span><br><span class="line">```  </span><br><span class="line">结果</span><br><span class="line">-----</span><br><span class="line">  </span><br><span class="line">xy轴交换</span><br><span class="line">------</span><br><span class="line">```python  </span><br><span class="line">	bar = Bar(<span class="string">"x 轴和 y 轴交换"</span>)</span><br><span class="line">	bar.add(<span class="string">"商家A"</span>, attr, v1)</span><br><span class="line">	bar.add(<span class="string">"商家B"</span>, attr, v2, is_convert=<span class="keyword">True</span>)</span><br><span class="line">	bar.render()</span><br><span class="line">	<span class="keyword">from</span> pyecharts <span class="keyword">import</span> EffectScatter</span><br><span class="line">```  </span><br><span class="line">结果  </span><br><span class="line">-----</span><br><span class="line"></span><br><span class="line">动态散点图</span><br><span class="line">------</span><br><span class="line">```python</span><br><span class="line">	<span class="keyword">from</span> pyecharts <span class="keyword">import</span> EffectScatter</span><br><span class="line">	v1 = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>]</span><br><span class="line">	v2 = [<span class="number">25</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">10</span>, <span class="number">60</span>, <span class="number">33</span>]</span><br><span class="line">	es = EffectScatter(<span class="string">"动态散点图示例"</span>)</span><br><span class="line">	es.add(<span class="string">"effectScatter"</span>, v1, v2)</span><br><span class="line">	es.render()	</span><br><span class="line">```  </span><br><span class="line">结果</span><br><span class="line">-----</span><br><span class="line">漏斗图</span><br><span class="line">------</span><br><span class="line">```python</span><br><span class="line">	<span class="keyword">from</span> pyecharts <span class="keyword">import</span> Funnel</span><br><span class="line">	<span class="comment">#漏斗图</span></span><br><span class="line">	attr = [<span class="string">"衬衫"</span>, <span class="string">"羊毛衫"</span>, <span class="string">"雪纺衫"</span>, <span class="string">"裤子"</span>, <span class="string">"高跟鞋"</span>, <span class="string">"袜子"</span>]</span><br><span class="line">	value = [<span class="number">20</span>, <span class="number">40</span>, <span class="number">60</span>, <span class="number">80</span>, <span class="number">100</span>, <span class="number">120</span>]</span><br><span class="line">	funnel = Funnel(<span class="string">"漏斗图示例"</span>)</span><br><span class="line">	funnel.add(<span class="string">"商品"</span>, attr, value, is_label_show=<span class="keyword">True</span>, label_pos=<span class="string">"inside"</span>, label_text_color=<span class="string">"#fff"</span>)</span><br><span class="line">	funnel.render()</span><br></pre></td></tr></table></figure>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h2 id="仪表盘"><a href="#仪表盘" class="headerlink" title="仪表盘"></a>仪表盘</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">from</span> pyecharts <span class="keyword">import</span> Gauge</span><br><span class="line">	gauge = Gauge(<span class="string">"仪表盘示例"</span>)</span><br><span class="line">	gauge.add(<span class="string">"业务指标"</span>, <span class="string">"完成率"</span>, <span class="number">88</span>)</span><br><span class="line">	gauge.show_config()</span><br><span class="line">	gauge.render()</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<p></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/18/pyecharts/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="w-可视化" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -511,79 +563,6 @@ print(len(contentList))  <span class="comment"># 看看有多少条</span>
 
 
   
-    <article id="w-我会有猫的" class="article article-type-w  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
-    </h1>
-  
-
-        
-        <a href="/2018/04/05/我会有猫的/" class="archive-article-date">
-  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font face="微软雅黑" color="black" size="4"><br>#立flag 好好赚钱<br>##争取早日把主人带回家<br><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/20180407.jpg?raw=true" alt=""><br></font>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/05/我会有猫的/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="w-我不想写论文" class="article article-type-w  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -628,6 +607,79 @@ print(len(contentList))  <span class="comment"># 看看有多少条</span>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/05/我不想写论文/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="w-我会有猫的" class="article article-type-w  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/05/我会有猫的/">我会有猫的！</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/05/我会有猫的/" class="archive-article-date">
+  	<time datetime="2018-04-05T08:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font face="微软雅黑" color="black" size="4"><br>#立flag 好好赚钱<br>##争取早日把主人带回家<br><img src="https://github.com/gengsuishang/gengsuishang.github.io/blob/master/img/20180407.jpg?raw=true" alt=""><br></font>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">我一定会有猫的</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/05/我会有猫的/">展开全文 >></a>
         </p>
       
 
@@ -827,11 +879,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
+                <a href="javascript:void(0)" class="js-tag color3">随记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随记</a>
+                <a href="javascript:void(0)" class="js-tag color3">我一定会有猫的</a>
               </li>
              
               <li class="article-tag-list-item">
